@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio Saya</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      line-height: 1.6;
+      background: #0d1117;
+      color: #e6edf3;
+      transition: background 0.4s, color 0.4s;
+    }
+    header {
+      background: linear-gradient(135deg, #4a90e2, #9013fe);
+      color: #fff;
+      padding: 80px 20px 60px;
+      text-align: center;
+      position: relative;
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+    header h1 {
+      font-size: 2.5em;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+    nav {
+      background: #161b22;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #e6edf3;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #4a90e2; }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #4a90e2;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #161b22;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      padding: 20px;
+      transition: transform 0.3s, background 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover { 
+      transform: translateY(-5px);
+      background: #1f2631;
+    }
+    .card h3 { margin-bottom: 10px; color: #fff; }
+    footer {
+      background: #161b22;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .btn, #themeToggle {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      padding: 10px 20px;
+      background: #4a90e2;
+      color: #fff;
+      border-radius: 5px;
+      margin-top: 15px;
+      text-decoration: none;
+      border: none;
+      font-weight: bold;
+      transition: transform 0.2s, background 0.3s;
+    }
+    .btn:hover { background: #357ABD; }
+    #themeToggle {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: #fff;
+      color: #333;
+      border-radius: 20px;
+      padding: 8px 14px;
+    }
+    /* Ripple efek */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      animation: rippleAnim 0.6s linear;
+      background: rgba(255, 255, 255, 0.5);
+      pointer-events: none;
+    }
+    @keyframes rippleAnim {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+    .btn:active, #themeToggle:active {
+      transform: scale(0.95);
+    }
+    body.light {
+      background: #f5f5f5;
+      color: #222;
+    }
+    body.light nav { background: #fff; }
+    body.light .card { background: #fff; }
+    body.light footer { background: #eee; color: #555; }
+  </style>
+</head>
+<body>
+    <header>
+    <button id="themeToggle">🌙</button>
+    <img src="1b0b435e-9f21-4701-846c-78db91309bcb.jpg" alt="Foto Profil">
+    <h1 id="typing"></h1>
+    <p>Web Developer | Designer | Freelancer</p>
+  </header>
+
+  <nav>
+    <a href="#about">Tentang</a>
+    <a href="#projects">Projek</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+
+  <section id="about">
+    <h2>Tentang Saya</h2>
+    <p>
+      Saya adalah pelajar Rekayasa Perangkat Lunak (RPL) dari SMK Negeri 1 Ciomas. Saya memiliki misi pribadi untuk menjelajahi batas kemampuan diri dalam dunia koding. Portofolio ini adalah bukti nyata dari perjalanan saya dalam menguasai keterampilan teknis dan berkomitmen pada pertumbuhan berkelanjutan sebagai seorang pengembang
+  </section>
+
+  <section id="projects">
+    <h2>Projek</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Projek 1</h3>
+        <p>Pada tahap awal ini, saya berfokus pada penguasaan dasar yang menjadi fondasi bagi proyek-proyek selanjutnya. Proyek ini menunjukkan pemahaman saya terhadap [sebutkan salah satu atau dua hal spesifik, misalnya: "prinsip-prinsip desain" atau "analisis data dasar</p>
+        <a href="#" class="btn">Lihat</a>
+      </div>
+      <div class="card">
+        <h3>Projek 2</h3>
+        <p>Proyek ini merupakan langkah maju dalam mengaplikasikan pengetahuan yang telah saya peroleh. Melalui [sebutkan nama proyek atau jenisnya, misalnya: "studi kasus tentang A"], saya mengembangkan [sebutkan keahlian baru, misalnya: "kemampuan problem-solving yang lebih mendalam"] dan mengimplementasikannya secara nyata</p>
+        <a href="#" class="btn">Lihat</a>
+      </div>
+      <div class="card">
+        <h3>Projek 3</h3>
+        <p>Sebagai puncak dari perjalanan ini, proyek ketiga menyoroti kemampuan saya dalam menciptakan solusi inovatif dan komprehensif. Proyek ini tidak hanya menunjukkan penguasaan teknis, tetapi juga [sebutkan hal lain, misalnya: "pemikiran kritis dan kreativitas"] dalam menyelesaikan sebuah tantangan yang kompleks</p>
+        <a href="#" class="btn">Lihat</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Kontak</h2>
+    <p>Kamu bisa hubungi saya lewat email:</p>
+    <p><a href="geralyangpernahada64@gmail.com" class="btn">Email Saya</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bary — Dibuat dengan ❤</p>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        target.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    // Toggle Dark/Light Mode
+    const toggleBtn = document.getElementById("themeToggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light");
+      toggleBtn.textContent = document.body.classList.contains("light") ? "🌙" : "☀";
+    });
+
+    // Efek ketik otomatis
+    const text = "Welcome To Web Geral";
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+    window.onload = typeWriter;
+
+    // Ripple effect
+    function addRippleEffect(button) {
+      button.addEventListener("click", function(e) {
+        const ripple = document.createElement("span");
+        ripple.classList.add("ripple");
+        this.appendChild(ripple);
+
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = size + "px";
+        ripple.style.left = e.clientX - rect.left - size / 2 + "px";
+        ripple.style.top = e.clientY - rect.top - size / 2 + "px";
+
+        setTimeout(() => ripple.remove(), 600);
+      });
+    }
+    document.querySelectorAll(".btn, #themeToggle").forEach(addRippleEffect);
+  </script>
+</body>
+</html>
